@@ -20,8 +20,9 @@ for (var i = 0; i < box.length; i++) {
 // - may be add input fields inside the cart to take values from
 var cart = [];
 function addToCart(i) {
-	products[i].lager += 1;
-	cart.push([i, products[i].image, products[i].name, products[i].price, products[i].lager]);
+	products[i].inCart += 1;
+	console.log(products[i].inCart);
+	cart[i] = ([i, products[i].image, products[i].name, products[i].price, products[i].lager, products[i].inCart]);
 	console.log(cart);
 }
 
