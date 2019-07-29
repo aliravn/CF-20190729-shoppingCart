@@ -46,6 +46,7 @@ nav {
   background-color: lightpink; /* Fallback color */
   border-radius: 15px;
   padding: 1vw;
+  flex-wrap: wrap;
 }
 
 .cartBox {
