@@ -32,7 +32,22 @@ nav {
     text-decoration: none;
     margin-left: 1vw;}
 
-/*MODAL BOX*/
+/*CART BOX*/
+
+#cart-content {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 50%;
+  top: 7em;
+  width: 50%; /* Full width */
+  height: 50%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: lightpink; /* Fallback color */
+  border-radius: 15px
+}
+
+
 
 /* ---------- MAIN SECTION --------- */
 

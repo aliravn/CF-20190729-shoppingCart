@@ -28,6 +28,7 @@ document.getElementById("cartBtn").addEventListener("click", showCart, false);
 
 function showCart() {
 	console.log(cart);
+	document.getElementById("cart-content").style.display = "initial";
 }
 
 
