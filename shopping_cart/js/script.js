@@ -3,7 +3,7 @@
 for (var i = 0; i < products.length; i++) {
 	document.getElementById("shop").innerHTML += `<div class="gadgetBox" id="${i}">
 	<img src="${products[i].image}"><p class="category">${products[i].category}</p>
-	<p class="product">${products[i].name}</p><p class="price">${products[i].price}</p>
+	<p class="product">${products[i].name} ${products[i].model}</p><p class="price">${products[i].price}</p>
 	<div>&#9825;&#8644;&#128065;</div></div>`;
 	}
 
@@ -18,13 +18,17 @@ for (var i = 0; i < box.length; i++) {
 // - take an element and add it to an array (var shoppingCart)
 // - should use the operator += (to add quantity of product)
 // - may be add input fields inside the cart to take values from
-
-function addToCart() {
-	console.log("hllo");
+var cart = [];
+function addToCart(i) {
+	cart.push([i, products[i].name, products[i].price]);
+	console.log(cart, typeof cart);
 }
 
+document.getElementById("cartBtn").addEventListener("click", showCart, false);
 
-
+function showCart() {
+	console.log(cart);
+}
 
 
 
