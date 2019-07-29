@@ -1,0 +1,99 @@
+/* ------ PLEASE IGNORE THE MESSY SASS! I WAS IN DESPAIR ---------- */
+body, html {
+  margin: 0; 
+  font-size: 1.5vw; }
+
+header {
+  width: 100%;
+  height: 5em;
+  background-color: #000000;
+  color: white; }
+  
+#header-top {
+  background-color: #1D202B;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#header-bottom {
+  display: flex;
+  justify-content: space-evenly; /* creates even space between margin and elements itself */
+  margin-top: 1.8vw;
+}
+
+#address {
+  margin-right: 45vw;
+}
+nav {
+  background-color: #414141;
+  text-align: center; } 
+  a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1vw;}
+
+/* ---------- MAIN SECTION --------- */
+
+main {
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; 
+  flex-wrap: wrap;}
+
+.top_box {
+  width: 30%;
+  margin: 2vw 0;
+}
+
+.new_products {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2vw;
+}
+
+.new_products > span {
+  margin-left: 2vw; 
+  margin-top: 3vw;
+  font-weight: bold;
+}
+
+#header {
+  flex-grow: 2; /* it makes one of the items twice the sice as the other one*/
+  margin-left: 0;
+}
+
+#shop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  flex-wrap: wrap;
+  margin-bottom: 2vw
+}
+
+.gadgetBox {
+  width: 22%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 1px 1px 5px grey, -1px -1px 5px grey
+}
+
+.gadgetBox > img, p, div {
+  width: 90%;
+}
+
+.gadgetBox > p {
+  width: 90%;
+}
+
+
+/* --------- FOOTER SECTION ---------- */
+
+footer {
+  height: 10vw;
+  background-image: url('../img/footer.jpeg');
+}
+

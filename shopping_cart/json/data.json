@@ -1,0 +1,25 @@
+var products = [{
+	"name": "MacBook",
+	"model": "Pro",
+	"category": "Laptops",
+	"image": "img/img_pro.jpeg",
+	"price": "1980"
+},{
+	"name": "ASUS",
+	"model": "TransformPad",
+	"category": "Laptops",
+	"image": "img/img_asus.jpeg",
+	"price": "400"
+},{
+	"name": "Sony",
+	"model": "Noise Cancellor",
+	"image": "img/img_sony.jpeg",
+	"category": "Accessories",
+	"price": "180"
+},{
+	"name": "MacBook",
+	"model": "Air",
+	"image": "img/img_air.jpeg",
+	"category": "Laptops",
+	"price": "1600"
+}];
