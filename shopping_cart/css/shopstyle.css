@@ -47,6 +47,12 @@ nav {
   border-radius: 15px
 }
 
+.cartBox {
+  background-color: lightblue;
+  width: 40%;
+  height: 50%
+}
+
 
 
 /* ---------- MAIN SECTION --------- */

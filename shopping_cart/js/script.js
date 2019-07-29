@@ -29,6 +29,7 @@ document.getElementById("cartBtn").addEventListener("click", showCart, false);
 function showCart() {
 	console.log(cart);
 	document.getElementById("cart-content").style.display = "initial";
+	// document.getElementById("cart-content").innerHTML = "Hello from cart box";
 }
 
 
