@@ -27,7 +27,7 @@ function addToCart(i) {
 }
 
 document.getElementById("cartBtn").addEventListener("click", showCart, false);
-
+document.getElementById("cart-content").addEventListener("click", closeCart, false);
 
 function showCart() {
 	var totalPrice = 0;
@@ -35,12 +35,15 @@ function showCart() {
 	document.getElementById("cart-content").innerHTML = "";
 	for (var i = 0; i < cart.length; i++) {		
 		document.getElementById("cart-content").innerHTML += `<div class="cartBox"><img src="${cart[i][1]}"><p>${cart[i][2]}</p><p>Price: ${cart[i][3]} EUR</p><p>Items: ${cart[i][5]}</p></div>`;
-	var totalPrice = totalPrice + (cart[i][3] * cart[i][5]);	
+	var totalPrice = totalPrice + (cart[i][3] * cart[i][5]);
 	}
-	document.getElementById("cart-content").innerHTML += `<div id="totalPrice">Total price for yor purchase is: <b>${totalPrice} EUR</b></div>`
+	document.getElementById("cart-content").innerHTML += `<div id="totalPrice">Total price for yor purchase is: <b>${totalPrice} EUR</b></div>`;
 }
 
-
+function closeCart() {
+	console.log("hello from cart");
+	document.getElementById("cart-content").style.display = "none";
+}
 
 // if (i==2) {
 // 		document.getElementById("shop").innerHTML += `<div id="test"></div>`;

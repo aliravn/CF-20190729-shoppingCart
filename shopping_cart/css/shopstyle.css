@@ -24,6 +24,11 @@ header {
 #address {
   margin-right: 45vw;
 }
+
+#cartBtn {
+  cursor: pointer;
+}
+
 nav {
   background-color: #414141;
   text-align: center; } 
@@ -118,7 +123,8 @@ main {
   flex-flow: column;
   align-items: center;
   text-align: center;
-  box-shadow: 1px 1px 5px grey, -1px -1px 5px grey
+  box-shadow: 1px 1px 5px grey, -1px -1px 5px grey;
+  cursor: pointer;
 }
 
 .gadgetBox > img, p, div {
