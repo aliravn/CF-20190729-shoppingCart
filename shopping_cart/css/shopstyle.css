@@ -38,7 +38,7 @@ nav {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 50%;
+  left: 40%;
   top: 7em;
   width: 50%; /* Full width */
   height: 50%; /* Full height */
@@ -55,8 +55,6 @@ nav {
   text-align: center;
   padding: 1vw;
 }
-
-
 
 /* ---------- MAIN SECTION --------- */
 

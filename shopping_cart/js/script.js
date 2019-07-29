@@ -20,18 +20,17 @@ for (var i = 0; i < box.length; i++) {
 // - may be add input fields inside the cart to take values from
 var cart = [];
 function addToCart(i) {
-	cart.push([i, products[i].name, products[i].price]);
-	console.log(cart, typeof cart);
+	cart.push([i, products[i].image, products[i].name, products[i].price]);
+	console.log(cart);
 }
 
 document.getElementById("cartBtn").addEventListener("click", showCart, false);
 
 function showCart() {
-	console.log(cart);
+	console.log(cart[0][1]);
 	document.getElementById("cart-content").style.display = "initial";
-	// document.getElementById("cart-content").innerHTML = "Hello from cart box";
+	document.getElementById("cart-content").innerHTML = `<div class="cartBox"><img src="${cart[0][1]}"><p>${cart[0][2]}</p><p>Price: ${cart[0][3]} EUR</p></div>`;
 }
-
 
 
 // if (i==2) {
