@@ -49,6 +49,11 @@ nav {
   flex-wrap: wrap;
 }
 
+#closeBtn {
+  text-align: right;
+  cursor: pointer;
+}
+
 .cartBox {
   background-color: lightblue;
   width: 15vw;
@@ -65,6 +70,7 @@ nav {
 #totalPrice {
   width: 100%;
   padding-left: 5vw;
+  margin-top: 2vw;
 }
 /* ---------- MAIN SECTION --------- */
 

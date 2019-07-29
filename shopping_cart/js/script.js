@@ -28,6 +28,7 @@ function addToCart(i) {
 
 document.getElementById("cartBtn").addEventListener("click", showCart, false);
 
+
 function showCart() {
 	var totalPrice = 0;
 	document.getElementById("cart-content").style.display = "flex";
@@ -38,9 +39,6 @@ function showCart() {
 	}
 	document.getElementById("cart-content").innerHTML += `<div id="totalPrice">Total price for yor purchase is: <b>${totalPrice} EUR</b></div>`
 }
-
-// products[i].lager += 1;
-
 
 
 
@@ -69,8 +67,3 @@ function showCart() {
 
 // 			document.getElementById("cross").addEventListener("click", close, false);
 // 		}
-
-			
-			
-			
-// 			// 	document.getElementById("test").style.display = "flex";
