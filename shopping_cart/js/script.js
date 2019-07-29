@@ -20,7 +20,8 @@ for (var i = 0; i < box.length; i++) {
 // - may be add input fields inside the cart to take values from
 var cart = [];
 function addToCart(i) {
-	cart.push([i, products[i].image, products[i].name, products[i].price]);
+	products[i].lager += 1;
+	cart.push([i, products[i].image, products[i].name, products[i].price, products[i].lager]);
 	console.log(cart);
 }
 
@@ -32,8 +33,12 @@ function showCart() {
 	for (var i = 0; i < cart.length; i++) {
 	document.getElementById("cart-content").innerHTML += `<div class="cartBox"><img src="${cart[i][1]}"><p>${cart[i][2]}</p><p>Price: ${cart[i][3]} EUR</p></div>`;
 	}
-	
+
 }
+
+// products[i].lager += 1;
+
+
 
 
 // if (i==2) {
