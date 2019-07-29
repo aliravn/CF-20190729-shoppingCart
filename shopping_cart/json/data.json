@@ -3,23 +3,27 @@ var products = [{
 	"model": "Pro",
 	"category": "Laptops",
 	"image": "img/img_pro.jpeg",
-	"price": "1980"
+	"price": 1980,
+	"lager": 15
 },{
 	"name": "ASUS",
 	"model": "TransformPad",
 	"category": "Laptops",
 	"image": "img/img_asus.jpeg",
-	"price": "400"
+	"price": 400,
+	"lager": 100
 },{
 	"name": "Sony",
 	"model": "Noise Cancellor",
 	"image": "img/img_sony.jpeg",
 	"category": "Accessories",
-	"price": "180"
+	"price": 180,
+	"lager": 200
 },{
 	"name": "MacBook",
 	"model": "Air",
 	"image": "img/img_air.jpeg",
 	"category": "Laptops",
-	"price": "1600"
+	"price": 1600,
+	"lager": 10
 }];
