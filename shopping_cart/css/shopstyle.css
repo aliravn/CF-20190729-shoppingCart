@@ -44,13 +44,16 @@ nav {
   height: 50%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: lightpink; /* Fallback color */
-  border-radius: 15px
+  border-radius: 15px;
+  padding: 1vw;
 }
 
 .cartBox {
   background-color: lightblue;
   width: 40%;
-  height: 50%
+  border-radius: 15px;
+  text-align: center;
+  padding: 1vw;
 }
 
 
