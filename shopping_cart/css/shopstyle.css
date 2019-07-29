@@ -38,11 +38,11 @@ nav {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 40%;
+  left: 5%;
   top: 7em;
-  width: 50%; /* Full width */
-  height: 50%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  /*max-width: 90%;  Full width */
+  /*height: 50%; Full height */
+  /*overflow: auto;  Enable scroll if needed */
   background-color: lightpink; /* Fallback color */
   border-radius: 15px;
   padding: 1vw;
@@ -50,10 +50,15 @@ nav {
 
 .cartBox {
   background-color: lightblue;
-  width: 40%;
+  width: 15vw;
   border-radius: 15px;
   text-align: center;
   padding: 1vw;
+  margin: 2px;
+}
+
+.cartBox > img {
+  width: 95%;
 }
 
 /* ---------- MAIN SECTION --------- */

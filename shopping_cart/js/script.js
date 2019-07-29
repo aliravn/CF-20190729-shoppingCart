@@ -28,8 +28,10 @@ document.getElementById("cartBtn").addEventListener("click", showCart, false);
 
 function showCart() {
 	console.log(cart[0][1]);
-	document.getElementById("cart-content").style.display = "initial";
-	document.getElementById("cart-content").innerHTML = `<div class="cartBox"><img src="${cart[0][1]}"><p>${cart[0][2]}</p><p>Price: ${cart[0][3]} EUR</p></div>`;
+	document.getElementById("cart-content").style.display = "flex";
+	for (var i = 0; i < cart.length; i++) {
+	document.getElementById("cart-content").innerHTML += `<div class="cartBox"><img src="${cart[i][1]}"><p>${cart[i][2]}</p><p>Price: ${cart[i][3]} EUR</p></div>`;
+	}
 }
 
 
