@@ -33,10 +33,9 @@ function showCart() {
 	document.getElementById("cart-content").style.display = "flex";
 	for (var i = 0; i < cart.length; i++) {		
 		document.getElementById("cart-content").innerHTML += `<div class="cartBox"><img src="${cart[i][1]}"><p>${cart[i][2]}</p><p>Price: ${cart[i][3]} EUR</p><p>Items: ${cart[i][5]}</p></div>`;
-	var totalPrice = totalPrice + (cart[i][3] * cart[i][5]);
-	console.log(totalPrice);	
+	var totalPrice = totalPrice + (cart[i][3] * cart[i][5]);	
 	}
-	document.getElementById("cart-content").innerHTML += `<div class="totalPrice"></div>`
+	document.getElementById("cart-content").innerHTML += `<div id="totalPrice">Total price for yor purchase is: <b>${totalPrice} EUR</b></div>`
 }
 
 // products[i].lager += 1;

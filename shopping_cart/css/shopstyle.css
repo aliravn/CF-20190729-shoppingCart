@@ -62,6 +62,10 @@ nav {
   width: 95%;
 }
 
+#totalPrice {
+  width: 100%;
+  padding-left: 5vw;
+}
 /* ---------- MAIN SECTION --------- */
 
 main {
