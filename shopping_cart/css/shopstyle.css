@@ -5,24 +5,33 @@ body, html {
 
 header {
   width: 100%;
-  height: 8em;
   background-color: #000000;
-  color: white; }
+  color: white; 
+  font-weight: bold;
+}
   
 #header-top {
   background-color: #1D202B;
+  width: 100%;
+  height: 3vw;
+  display: flex;
+  align-items: center;
+}
+
+#header-top-container {
+  width: 80%;
   margin: 0 auto;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 #header-bottom {
+  width: 80%;
+  margin: 0 auto;
+  height: 8vw;
   display: flex;
-  justify-content: space-evenly; /* creates even space between margin and elements itself */
-  margin-top: 1.8vw;
-}
-
-#address {
-  margin-right: 45vw;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #cartBtn {
@@ -30,12 +39,14 @@ header {
 }
 
 nav {
-  background-color: #414141;
-  text-align: center; } 
+  background-color: #ffffff;
+  text-align: center; 
+} 
   a {
-    color: white;
     text-decoration: none;
-    margin-left: 1vw;}
+    margin-left: 1vw;
+    color: #000000;
+  }
 
 /*CART BOX*/
 
