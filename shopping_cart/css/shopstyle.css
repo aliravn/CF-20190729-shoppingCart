@@ -5,7 +5,7 @@ body, html {
 
 header {
   width: 100%;
-  height: 5em;
+  height: 8em;
   background-color: #000000;
   color: white; }
   
@@ -45,7 +45,8 @@ nav {
   z-index: 1; /* Sit on top */
   left: 5%;
   top: 7em;
-  /*max-width: 90%;  Full width */
+  width: 100%;
+  margin-top: 1vw;
   /*height: 50%; Full height */
   /*overflow: auto;  Enable scroll if needed */
   background-color: lightpink; /* Fallback color */
@@ -54,9 +55,9 @@ nav {
   flex-wrap: wrap;
 }
 
-#closeBtn {
-  text-align: right;
+#closeButton {
   cursor: pointer;
+  width: 100%;
 }
 
 .cartBox {
@@ -74,13 +75,14 @@ nav {
 
 #totalPrice {
   width: 100%;
-  padding-left: 5vw;
   margin-top: 2vw;
+  margin-left: 1px;
+  margin-bottom: 2vw
 }
 /* ---------- MAIN SECTION --------- */
 
 main {
-  width: 65%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between; 

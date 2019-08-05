@@ -3,7 +3,7 @@ var products = [{
 	"model": "Pro",
 	"category": "Laptops",
 	"image": "img/img_pro.jpeg",
-	"price": 1980,
+	"price": 300,
 	"lager": 15,
 	"inCart": 0
 },{
@@ -11,7 +11,7 @@ var products = [{
 	"model": "TransformPad",
 	"category": "Laptops",
 	"image": "img/img_asus.jpeg",
-	"price": 400,
+	"price": 200,
 	"lager": 100,
 	"inCart": 0
 },{
@@ -19,7 +19,7 @@ var products = [{
 	"model": "Noise Cancellor",
 	"image": "img/img_sony.jpeg",
 	"category": "Accessories",
-	"price": 180,
+	"price": 50,
 	"lager": 200,
 	"inCart": 0
 },{
@@ -27,7 +27,7 @@ var products = [{
 	"model": "Air",
 	"image": "img/img_air.jpeg",
 	"category": "Laptops",
-	"price": 1600,
+	"price": 250,
 	"lager": 10,
 	"inCart": 0
 }];
