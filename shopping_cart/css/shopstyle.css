@@ -8,6 +8,7 @@ header {
   background-color: #000000;
   color: white; 
   font-weight: bold;
+  border-bottom: 2px solid red;
 }
   
 #header-top {
@@ -19,14 +20,14 @@ header {
 }
 
 #header-top-container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 
 #header-bottom {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   height: 8vw;
   display: flex;
@@ -40,12 +41,17 @@ header {
 
 nav {
   background-color: #ffffff;
-  text-align: center; 
+  width: 90%;
+  margin: 0 auto;
+  height: 5vw;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: .5px solid grey;
 } 
   a {
-    text-decoration: none;
-    margin-left: 1vw;
     color: #000000;
+    align-self: center;
+    text-decoration: none;
   }
 
 /*CART BOX*/
