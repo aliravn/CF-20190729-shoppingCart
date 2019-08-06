@@ -1,4 +1,3 @@
-/* ------ PLEASE IGNORE THE MESSY SASS! I WAS IN DESPAIR ---------- */
 body, html {
   margin: 0; 
   font-size: 1.5vw; }
@@ -36,7 +35,10 @@ header {
 }
 
 #cartBtn {
+  font-size: 2vw;
   cursor: pointer;
+  background-color: lightpink;
+  border-radius: 10px;
 }
 
 nav {
@@ -60,10 +62,9 @@ nav {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 5%;
-  top: 7em;
+/*   margin: 0 auto; */
+  top: 12vw;
   width: 90%;
-  margin-top: 1vw;
   /*height: 50%; Full height */
   /*overflow: auto;  Enable scroll if needed */
   background-color: lightpink; /* Fallback color */
