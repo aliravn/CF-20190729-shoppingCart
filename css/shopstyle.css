@@ -64,13 +64,17 @@ nav {
   z-index: 1; /* Sit on top */
 /*   margin: 0 auto; */
   top: 12vw;
-  width: 90%;
+  right: 5%;
+  width: 70vw;
+  height: 40vw; /*either use overflow for many products or remove the height to adjust automatically*/
   /*height: 50%; Full height */
   /*overflow: auto;  Enable scroll if needed */
   background-color: lightpink; /* Fallback color */
   border-radius: 15px;
   padding: 0 1vw;
   flex-wrap: wrap;
+  border: 1px solid black;
+  box-shadow: 1px 1px 3px grey, -1px -1px 3px grey;
 }
 
 #closeButton {
@@ -85,6 +89,7 @@ nav {
 .cartBox {
   background-color: lightblue;
   width: 15vw;
+  height: 24vw;
   border-radius: 15px;
   text-align: center;
   padding: 1vw;
@@ -96,9 +101,9 @@ nav {
 }
 
 .rmvButton {
-  font-size: 2vw;
   color: red;
   padding: 0;
+  margin-top: 0.5vw;
 }
 
 #totalPrice {
@@ -159,10 +164,12 @@ main {
 
 .gadgetBox > img, p, div {
   width: 90%;
+  margin: 0;
 }
 
 .gadgetBox > .product {
-  height: 4vw;
+  margin-top: .5vw;
+  height: 3vw;
 }
 
 .gadgetBox > p {
@@ -173,7 +180,9 @@ main {
 /* --------- FOOTER SECTION ---------- */
 
 footer {
-  height: 10vw;
+  width: 100%;
+  height: 12vw;
   background-image: url('../img/footer.jpeg');
+  background-repeat: no-repeat;
 }
 
