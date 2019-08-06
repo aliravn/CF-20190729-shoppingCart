@@ -78,12 +78,12 @@ function closeCart() {
 	document.getElementById("cart-content").style.display = "none";
 }
 
-
-
+// this function will reduce number of items by 1 and recalculate the price
 function removeFromCart(id) {
 	var id = id[3];
 	cart[id][5] -= 1;
 	document.getElementById(`item${id}`).innerHTML = `Items: ${cart[id][5]}`;
+	document.getElementById("totalPrice").innerHTML = `Total: <b>${calcTotalPrice()}EUR</b>`;
 	if (cart[id][5] == 0) {
 		document.getElementById(`cartBox${id}`).style.display = "none";
 	}
