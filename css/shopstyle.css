@@ -68,7 +68,7 @@ nav {
   /*overflow: auto;  Enable scroll if needed */
   background-color: lightpink; /* Fallback color */
   border-radius: 15px;
-  padding: 1vw;
+  padding: 0 1vw;
   flex-wrap: wrap;
 }
 
@@ -76,7 +76,9 @@ nav {
   cursor: pointer;
   font-size: 3vw;
   width: 100%;
+  align-self: center;
   text-align: right;
+  margin-top: 0.2vw;
 }
 
 .cartBox {

@@ -50,7 +50,7 @@ function showCart() {
 	} else {
 		shoppingCart.style.display = "flex";
 		shoppingCart.innerHTML = "";
-		shoppingCart.innerHTML += `<span id="closeButton"><i class="fas fa-times-circle"></i></span>`;
+		shoppingCart.innerHTML += `<span id="closeButton">&#10006;</span>`;
 		for (var i = 0; i < cart.length; i++) {
 			if (cart[i] == undefined || cart[i][5] == 0) {
 				continue //check if one slot is empty, if yes it moves on without breaking
