@@ -26,7 +26,7 @@ function addToCart(i) {
 	cart[i] = ([i, products[i].image, products[i].name, products[i].price, products[i].lager, products[i].inCart]);
 }
 
-// calculates the total price of all items inside the cart array
+// calculates the total price of all items inside the cart array - triggered by showCart and removeFromCart functions
 function calcTotalPrice() {
 	var totalPrice = 0;
 	for (i = 0; i < cart.length; i++) {
@@ -46,7 +46,7 @@ function showCart() {
 		shoppingCart.style.display = "flex";
 		shoppingCart.innerHTML = "";
 		for (var i = 0; i < cart.length; i++) {
-			if (cart[i] == undefined) {
+			if (cart[i] == undefined || cart[i][5] == 0) {
 				continue //check if one slot is empty, if yes it moves on without breaking
 			} else {
 				shoppingCart.innerHTML += 
@@ -61,7 +61,7 @@ function showCart() {
 		}
 	}
 	shoppingCart.innerHTML += `<div id="totalPrice"></div>`;
-	document.getElementById("totalPrice").innerHTML = `Total: <b>${calcTotalPrice()}EUR</b>`; 
+	document.getElementById("totalPrice").innerHTML = `Total: <b>${calcTotalPrice()} EUR</b>`; 
 	shoppingCart.innerHTML += `<button id="closeButton">CLOSE</button>`;
 	document.getElementById("closeButton").addEventListener("click", closeCart, false);
 	
