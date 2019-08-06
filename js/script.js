@@ -8,7 +8,7 @@ for (var i = 0; i < products.length; i++) {
 		<img src="${products[i].image}">
 		<p class="category">${products[i].category}</p>
 		<p class="product">${products[i].name} ${products[i].model}</p>
-		<p class="price">${products[i].price}</p>
+		<p class="price">${products[i].price} EUR</p>
 		<div>&#9825;&#8644;&#128065;</div>
 		</div>`;
 	}
@@ -22,8 +22,10 @@ for (var i = 0; i < box.length; i++) {
 // this block of code adds items to the cart array 
 var cart = [];
 function addToCart(i) {
-	products[i].inCart += 1;
-	cart[i] = ([i, products[i].image, products[i].name, products[i].price, products[i].lager, products[i].inCart]);
+	if (cart[i] == undefined) {
+		cart[i] = 0;
+	}
+	cart[i] += 1; // number of products added
 	closeCart();
 }
 
@@ -34,7 +36,7 @@ function calcTotalPrice() {
 		if (cart[i] == undefined) {
 			continue //check if one slot is empty, if yes it moves on without breaking
 		} else {
-			totalPrice = totalPrice + cart[i][3] * cart[i][5];
+			totalPrice = totalPrice + cart[i] * products[i].price;
 		}	
 	}
 	return totalPrice;
@@ -52,16 +54,16 @@ function showCart() {
 		shoppingCart.innerHTML = "";
 		shoppingCart.innerHTML += `<span id="closeButton">&#10006;</span>`;
 		for (var i = 0; i < cart.length; i++) {
-			if (cart[i] == undefined || cart[i][5] == 0) {
+			if (cart[i] == undefined || cart[i] == 0) {
 				continue //check if one slot is empty, if yes it moves on without breaking
 			} else {
 				shoppingCart.innerHTML += 
 					`<div class="cartBox" id="cartBox${i}">
-						<img src="${cart[i][1]}">
-						<p>${cart[i][2]}</p>
-						<p>Price: ${cart[i][3]} EUR</p>
-						<p id="item${i}">Items: ${cart[i][5]}</p>
-						<button id="rmv${i}" class="rmvButton">remove</button>
+						<img src="${products[i].image}">
+						<p>${products[i].name}</p>
+						<p>Price: ${products[i].price} EUR</p>
+						<p id="item${i}">Items: ${cart[i]}</p>
+						<button id="rmv${i}" class="rmvButton"><i class="fas fa-trash-alt"></i></button>
 					</div>`;	
 			}
 		}
@@ -76,7 +78,6 @@ function showCart() {
 	}	
 }
 
-
 // this function will close the shopping cart (pink div)
 function closeCart() {
 	document.getElementById("cart-content").style.display = "none";
@@ -87,10 +88,10 @@ function closeCart() {
 // if total price is zero, it will hide the cart window completely
 function removeFromCart(id) {
 	var id = id[3];
-	cart[id][5] -= 1;
-	document.getElementById(`item${id}`).innerHTML = `Items: ${cart[id][5]}`;
+	cart[id] -= 1;
+	document.getElementById(`item${id}`).innerHTML = `Items: ${cart[id]}`;
 	document.getElementById("totalPrice").innerHTML = `Total: <b>${calcTotalPrice()} EUR</b>`;
-	if (cart[id][5] == 0 ) {
+	if (cart[id] == 0) {
 		document.getElementById(`cartBox${id}`).style.display = "none";
 	}
 	if (calcTotalPrice() == 0) {

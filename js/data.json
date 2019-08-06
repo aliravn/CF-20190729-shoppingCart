@@ -5,7 +5,6 @@ var products = [{
 	"image": "img/img_pro.jpeg",
 	"price": 300,
 	"lager": 15,
-	"inCart": 0
 },{
 	"name": "ASUS",
 	"model": "TransformPad",
@@ -13,7 +12,6 @@ var products = [{
 	"image": "img/img_asus.jpeg",
 	"price": 200,
 	"lager": 100,
-	"inCart": 0
 },{
 	"name": "Sony",
 	"model": "Noise Cancellor",
@@ -21,7 +19,6 @@ var products = [{
 	"category": "Accessories",
 	"price": 50,
 	"lager": 200,
-	"inCart": 0
 },{
 	"name": "MacBook",
 	"model": "Air",
@@ -29,5 +26,4 @@ var products = [{
 	"category": "Laptops",
 	"price": 250,
 	"lager": 10,
-	"inCart": 0
 }];
