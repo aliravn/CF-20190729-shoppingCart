@@ -19,16 +19,20 @@ for (var i = 0; i < box.length; i++) {
 	box[i].addEventListener("click", function(){addToCart(this.getAttribute("id"))}, false);
 }
 
-// this block of code adds items to the cart array and 
-// calculates the total price of all itms currently inside the array
+// this block of code adds items to the cart array 
 var cart = [];
-var totalPrice = 0;
 function addToCart(i) {
 	products[i].inCart += 1;
 	cart[i] = ([i, products[i].image, products[i].name, products[i].price, products[i].lager, products[i].inCart]);
-	totalPrice = totalPrice + (cart[i][3] * cart[i][5]); //problem in calculation
-	console.log(totalPrice);
-	// closeCart();
+}
+
+// calculates the total price of all items inside the cart array
+function calcTotalPrice() {
+	var totalPrice = 0;
+	for (i = 0; i < cart.length; i++) {
+		totalPrice = totalPrice + cart[i][3] * cart[i][5];
+	}
+	return totalPrice;
 }
 
 // here starts the long shopping cart story:
@@ -41,7 +45,6 @@ function showCart() {
 	} else {
 		shoppingCart.style.display = "flex";
 		shoppingCart.innerHTML = "";
-		
 		for (var i = 0; i < cart.length; i++) {
 			if (cart[i] == undefined) {
 				continue //check if one slot is empty, if yes it moves on without breaking
@@ -57,7 +60,8 @@ function showCart() {
 			}
 		}
 	}
-	shoppingCart.innerHTML += `<div id="totalPrice">Total: <b>${totalPrice} EUR</b></div>`;
+	shoppingCart.innerHTML += `<div id="totalPrice"></div>`;
+	document.getElementById("totalPrice").innerHTML = `Total: <b>${calcTotalPrice()}EUR</b>`; 
 	shoppingCart.innerHTML += `<button id="closeButton">CLOSE</button>`;
 	document.getElementById("closeButton").addEventListener("click", closeCart, false);
 	
