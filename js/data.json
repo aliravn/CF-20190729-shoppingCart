@@ -8,7 +8,7 @@ var products = [{
 },{
 	"name": "ASUS",
 	"model": "TransformPad",
-	"category": "Laptops",
+	"category": "Tablets",
 	"image": "img/img_asus.jpeg",
 	"price": 200,
 	"lager": 100,
@@ -16,7 +16,7 @@ var products = [{
 	"name": "Sony",
 	"model": "Noise Cancellor",
 	"image": "img/img_sony.jpeg",
-	"category": "Accessories",
+	"category": "Headphones",
 	"price": 50,
 	"lager": 200,
 },{

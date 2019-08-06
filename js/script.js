@@ -19,13 +19,13 @@ for (var i = 0; i < box.length; i++) {
 	box[i].addEventListener("click", function(){addToCart(this.getAttribute("id"))}, false);
 }
 
-// this block of code adds items to the cart array 
+// this block of code creates an array of number of products added to the cart 
 var cart = [];
 function addToCart(i) {
 	if (cart[i] == undefined) {
 		cart[i] = 0;
 	}
-	cart[i] += 1; // number of products added
+	cart[i] += 1; // 
 	closeCart();
 }
 
@@ -87,12 +87,12 @@ function closeCart() {
 // if number of items is zero, it will remove the item completely
 // if total price is zero, it will hide the cart window completely
 function removeFromCart(id) {
-	var id = id[3];
-	cart[id] -= 1;
-	document.getElementById(`item${id}`).innerHTML = `Items: ${cart[id]}`;
+	var i = id[3];
+	cart[i] -= 1;
+	document.getElementById(`item${i}`).innerHTML = `Items: ${cart[i]}`;
 	document.getElementById("totalPrice").innerHTML = `Total: <b>${calcTotalPrice()} EUR</b>`;
-	if (cart[id] == 0) {
-		document.getElementById(`cartBox${id}`).style.display = "none";
+	if (cart[i] == 0) {
+		document.getElementById(`cartBox${i}`).style.display = "none";
 	}
 	if (calcTotalPrice() == 0) {
 		document.getElementById("cart-content").style.display = "none";
