@@ -24,13 +24,18 @@ var cart = [];
 function addToCart(i) {
 	products[i].inCart += 1;
 	cart[i] = ([i, products[i].image, products[i].name, products[i].price, products[i].lager, products[i].inCart]);
+	closeCart();
 }
 
 // calculates the total price of all items inside the cart array - triggered by showCart and removeFromCart functions
 function calcTotalPrice() {
 	var totalPrice = 0;
 	for (i = 0; i < cart.length; i++) {
-		totalPrice = totalPrice + cart[i][3] * cart[i][5];
+		if (cart[i] == undefined) {
+			continue //check if one slot is empty, if yes it moves on without breaking
+		} else {
+			totalPrice = totalPrice + cart[i][3] * cart[i][5];
+		}	
 	}
 	return totalPrice;
 }
@@ -83,7 +88,7 @@ function removeFromCart(id) {
 	var id = id[3];
 	cart[id][5] -= 1;
 	document.getElementById(`item${id}`).innerHTML = `Items: ${cart[id][5]}`;
-	document.getElementById("totalPrice").innerHTML = `Total: <b>${calcTotalPrice()}EUR</b>`;
+	document.getElementById("totalPrice").innerHTML = `Total: <b>${calcTotalPrice()} EUR</b>`;
 	if (cart[id][5] == 0) {
 		document.getElementById(`cartBox${id}`).style.display = "none";
 	}
