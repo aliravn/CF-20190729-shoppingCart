@@ -74,7 +74,9 @@ nav {
 
 #closeButton {
   cursor: pointer;
+  font-size: 3vw;
   width: 100%;
+  text-align: right;
 }
 
 .cartBox {
