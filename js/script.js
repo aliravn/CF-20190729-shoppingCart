@@ -45,11 +45,12 @@ document.getElementById("cartBtn").addEventListener("click", showCart, false);
 
 function showCart() {
 	var shoppingCart = document.getElementById("cart-content");
-	if (cart.length == 0) {
+	if (cart.length == 0 || calcTotalPrice() == 0) {
 		alert("Your cart is empty.");
 	} else {
 		shoppingCart.style.display = "flex";
 		shoppingCart.innerHTML = "";
+		shoppingCart.innerHTML += `<span id="closeButton"><i class="fas fa-times-circle"></i></span>`;
 		for (var i = 0; i < cart.length; i++) {
 			if (cart[i] == undefined || cart[i][5] == 0) {
 				continue //check if one slot is empty, if yes it moves on without breaking
@@ -67,11 +68,9 @@ function showCart() {
 	}
 	shoppingCart.innerHTML += `<div id="totalPrice"></div>`;
 	document.getElementById("totalPrice").innerHTML = `Total: <b>${calcTotalPrice()} EUR</b>`; 
-	shoppingCart.innerHTML += `<button id="closeButton">CLOSE</button>`;
 	document.getElementById("closeButton").addEventListener("click", closeCart, false);
 	
 	var remove = document.getElementsByClassName("rmvButton");
-	console.log(remove);
 	for (var i = 0; i < remove.length; i++) {
 		remove[i].addEventListener("click", function(){removeFromCart(this.getAttribute("id"))}, false);
 	}	
@@ -83,7 +82,9 @@ function closeCart() {
 	document.getElementById("cart-content").style.display = "none";
 }
 
-// this function will reduce number of items by 1 and recalculate the price
+// this function will reduce number of items by 1, recalculate the price
+// if number of items is zero, it will remove the item completely
+// if total price is zero, it will hide the cart window completely
 function removeFromCart(id) {
 	var id = id[3];
 	cart[id][5] -= 1;
@@ -92,23 +93,7 @@ function removeFromCart(id) {
 	if (cart[id][5] == 0 ) {
 		document.getElementById(`cartBox${id}`).style.display = "none";
 	}
-	console.log(calcTotalPrice());
 	if (calcTotalPrice() == 0) {
 		document.getElementById("cart-content").style.display = "none";
 	};
 }
-
-
-
-// 	var totalPrice = 0;
-// 	for (var i = 0; i < cart.length; i++) {
-// 		if (cart[i] == undefined) { continue 
-// 		} else {
-// 			totalPrice = totalPrice + (cart[i][3] * cart[i][5]);
-// 		}
-// }
-
-	// var remove = document.getElementsByClassName("rmvButton");
-	// for (var i = 0; i < remove.length; i++) {
-	// 	remove[i].addEventListener("click", removeFromCart, false);
-	// 	console.log(i);
