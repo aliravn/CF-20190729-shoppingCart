@@ -4,16 +4,17 @@
 // loops through array of boxes (var box) JSON and renders boxes with image and text
 for (var i = 0; i < products.length; i++) {
 	document.getElementById("shop").innerHTML += 
-		`<div class="gadgetBox" id="${i}">
+		`<div class="gadgetBox">
 		<img src="${products[i].image}">
 		<p class="category">${products[i].category}</p>
 		<p class="product">${products[i].name} ${products[i].model}</p>
 		<p class="price">${products[i].price} EUR</p>
+		<button id="${i}" class="add">Add to Cart</button>
 		<div>&#9825;&#8644;&#128065;</div>
 		</div>`;
 	}
 
-var box = document.getElementsByClassName("gadgetBox");
+var box = document.getElementsByClassName("add");
 
 for (var i = 0; i < box.length; i++) {
 	box[i].addEventListener("click", function(){addToCart(this.getAttribute("id"))}, false);
@@ -71,7 +72,8 @@ function showCart() {
 	shoppingCart.innerHTML += `<div id="totalPrice"></div>`;
 	document.getElementById("totalPrice").innerHTML = `Total: <b>${calcTotalPrice()} EUR</b>`; 
 	document.getElementById("closeButton").addEventListener("click", closeCart, false);
-	
+	shoppingCart.innerHTML += `<button id="checkout">Checkout</button>`;
+
 	var remove = document.getElementsByClassName("rmvButton");
 	for (var i = 0; i < remove.length; i++) {
 		remove[i].addEventListener("click", function(){removeFromCart(this.getAttribute("id"))}, false);

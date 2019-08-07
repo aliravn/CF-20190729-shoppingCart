@@ -71,7 +71,7 @@ nav {
   /*overflow: auto;  Enable scroll if needed */
   background-color: lightpink; /* Fallback color */
   border-radius: 15px;
-  padding: 0 1vw;
+  padding: 1vw;
   flex-wrap: wrap;
   border: 1px solid black;
   box-shadow: 1px 1px 3px grey, -1px -1px 3px grey;
