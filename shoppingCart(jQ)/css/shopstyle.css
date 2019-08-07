@@ -1,0 +1,232 @@
+body, html {
+  margin: 0; 
+  font-size: 1.5vw;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 90%;
+  margin: 0 auto;
+  height: 3vw;
+  background-color: #8C4EA5;
+  display: flex;
+  align-items: center;
+  color: #ffffff; 
+  font-weight: bold;
+}
+
+#header-top-container {
+  width: 100%;
+  padding: 0 1vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+#cartBtn {
+  width: 20%;
+  font-size: 2vw;
+  cursor: pointer;
+  background-color: #8C4EA5;
+  border: none;
+  color: #ffffff; 
+  font-weight: bold;
+}
+
+nav {
+  background-color: #9B59B6;
+  width: 90%;
+  margin: 0 auto;
+  height: 5vw;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: .5px solid grey;
+} 
+  a {
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0 1vw;
+    align-self: center;
+    text-decoration: none;
+  }
+
+
+/*CART BOX*/
+
+#shoppingCart {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+/*   margin: 0 auto; */
+  top: 8vw;
+  right: 5%;
+  width: 70vw;
+  /*height: 40vw; either use overflow for many products or remove the height to adjust automatically*/
+  /*height: 50%; Full height */
+  /*overflow: auto;  Enable scroll if needed */
+  background-color: #8C4EA5; /* Fallback color */
+  border-radius: 15px;
+  padding: 1vw;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid black;
+  box-shadow: 1px 1px 3px grey, -1px -1px 3px grey;
+  color: white;
+}
+
+#shoppingCart > p {
+  margin: .5vw 0;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+#closeButton {
+  cursor: pointer;
+  font-size: 3vw;
+  width: 100%;
+  align-self: center;
+  text-align: right;
+  margin-top: 0.2vw;
+}
+
+#cart-content {
+  width: 100%;
+  margin: 0 auto;
+  color: black;
+}
+
+.cartBox {
+  background-color: lightblue;
+  width: 98%;
+  height: 6vw;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 1vw;
+  margin-bottom: 2px;
+}
+
+.cartBox > img {
+  width: 20%;
+  height: 5vw;
+}
+
+.cartBox > span {
+  width: 70%;
+  margin-left: 1vw;
+} 
+
+.delButton {
+  color: red;
+  padding: 0;
+  margin-top: 0.5vw;
+  font-size: 2vw;
+}
+
+.rmvButton {
+  color: black;
+  padding: 0;
+  margin-top: 0.5vw;
+  font-size: 2vw;
+}
+
+.addButton {
+  color: green;
+  padding: 0;
+  margin-top: 0.5vw;
+  font-size: 2vw;
+}
+
+#totalPrice {
+  width: 100%;
+  height: 2vw;
+  margin: 1vw 0;
+  margin-left: 2px;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+#checkout {
+  font-weight: bold;
+  align-self: flex-end;
+}
+/* ---------- MAIN SECTION --------- */
+h1 {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; 
+  flex-wrap: wrap;}
+
+.top_box {
+  width: 30%;
+  margin: 2vw 0;
+}
+
+.new_products {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2vw;
+}
+
+.new_products > span {
+  margin-left: 2vw; 
+  margin-top: 3vw;
+  font-weight: bold;
+}
+
+#header {
+  flex-grow: 2; /* it makes one of the items twice the sice as the other one*/
+  margin-left: 0;
+}
+
+#shop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  flex-wrap: wrap;
+  margin-bottom: 2vw
+}
+
+.gadgetBox {
+  width: 22%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 1px 1px 5px grey, -1px -1px 5px grey;
+  cursor: pointer;
+  padding-bottom: 1vw;
+}
+
+.gadgetBox > img, p, div {
+  width: 90%;
+  margin: 0;
+}
+
+.gadgetBox > .product {
+  margin-top: .5vw;
+  height: 3vw;
+}
+
+.gadgetBox > p {
+  width: 90%;
+}
+
+
+/* --------- FOOTER SECTION ---------- */
+
+/* footer {
+  width: 100%;
+  height: 12vw;
+  background-image: url('../img/footer.jpeg');
+  background-repeat: no-repeat;
+} */
+

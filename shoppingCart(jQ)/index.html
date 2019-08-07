@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Index</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/shopstyle.css">
+	<script src="https://kit.fontawesome.com/c2f140ad0b.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="header-top-container">
+			<span>CHOOSE THEME</span>
+			<span>SIGN IN</span>
+			<span>CREATE ACCOUNT</span>
+		</div>
+	</header>
+	<nav>
+		<a href="index.html">HOME</a>
+		<a href="#">EYEWEAR</a>
+		<a href="#">SHOES</a>
+		<a href="#">JEWELRY</a>
+		<a href="#">VIP</a>
+		<button id="cartBtn">VIEW CART(<span id="items">0</span>)</button>
+	</nav>
+
+
+
+	<main>
+		<section id="shoppingCart">
+			<span id="closeButton">&#10006;</span>
+			<div id="cart-content">
+			
+			</div>
+			<p><b>*Shipping info:</b> total price > 800 Euros = 6 Euros, otherwise = 9 Euros</p>
+			<div id="totalPrice"></div>
+			<div id="discount">discount based on condition</div>
+			<div id="tax">totalPrice after discount + 22%</div>
+			<div id="shipping">show shipping cost based on totalprice</div>
+			<div id="endPrice">totalPrice after tax + shipping cost</div>
+			<button id="calc">calcEndPrice</button>
+			<button id="checkout">Checkout</button>
+		</section>
+		<div class="new_products">
+			<h1 id="header">FEATURED PRODUCTS</h1>
+		</div>
+		
+		<section id="shop">
+
+		</section>
+
+	</main>
+
+	<footer>
+	</footer>
+ <script src="js/data.json"></script>
+ <script src="js/script.js"></script>
+</body>
+</html>
+
+
+<!-- muster of product box for styling purpose
+ 			<div class="gadgetBox">
+				<img src="img/img_air.jpeg">
+				<p class="category">"category" from JSON</p>
+				<p class="product">"name" from JSON</p>
+				<p class="price">"price" from JSON</p>
+				<div>&#9825;&#8644;&#128065;</div>
+			</div> -->
+
+
+<!-- MUSTER of CART BOX FOR STYLING
+	<div id="cartBox">
+		<img src="img/img_asus.jpeg">
+		<p></p>
+		<p></p>
+		<p></p>
+	<div>-->

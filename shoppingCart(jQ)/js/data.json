@@ -1,0 +1,17 @@
+var products = [{
+	"name": "Silver Crystal Bracelet",
+	"image": "img/bracelet.jpg",
+	"price": 155,
+},{
+	"name": "Diamond Earrings",
+	"image": "img/earring.jpg",
+	"price": 250,
+},{
+	"name": "Diamond Necklace",
+	"image": "img/necklase.jpg",
+	"price": 120,
+},{
+	"name": "18K White Gold Ring",
+	"image": "img/ring.jpg",
+	"price": 1190,
+}];

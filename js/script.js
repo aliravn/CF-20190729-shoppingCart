@@ -54,6 +54,7 @@ function showCart() {
 		shoppingCart.style.display = "flex";
 		shoppingCart.innerHTML = "";
 		shoppingCart.innerHTML += `<span id="closeButton">&#10006;</span>`;
+		document.getElementById("closeButton").addEventListener("click", closeCart, false);
 		for (var i = 0; i < cart.length; i++) {
 			if (cart[i] == undefined || cart[i] == 0) {
 				continue //check if one slot is empty, if yes it moves on without breaking
@@ -71,7 +72,7 @@ function showCart() {
 	}
 	shoppingCart.innerHTML += `<div id="totalPrice"></div>`;
 	document.getElementById("totalPrice").innerHTML = `Total: <b>${calcTotalPrice()} EUR</b>`; 
-	document.getElementById("closeButton").addEventListener("click", closeCart, false);
+	
 	shoppingCart.innerHTML += `<button id="checkout">Checkout</button>`;
 
 	var remove = document.getElementsByClassName("rmvButton");
