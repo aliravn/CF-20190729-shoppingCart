@@ -55,9 +55,9 @@ function showCart() {
 						<img src="${products[i].image}">
 						<span>${products[i].name} Price: ${products[i].price} EUR</span>
 						<p id="item${i}">Items: ${cart[i]}</p>
-						<button id="add${i}" class="addButton"><i class="fas fa-plus-square"></i></i></button>
-						<button id="rmv${i}" class="rmvButton"><i class="fas fa-minus-square"></i></i></button>
-						<button id="del${i}" class="delButton"><i class="fas fa-trash-alt"></i></button>
+						<button productId="${i}" class="addButton"><i class="fas fa-plus-square"></i></i></button>
+						<button productId="${i}" class="rmvButton"><i class="fas fa-minus-square"></i></i></button>
+						<button productId="${i}" class="delButton"><i class="fas fa-trash-alt"></i></button>
 					</div>`);	
 			}
 		}	
@@ -74,7 +74,7 @@ function showCart() {
 
 // remove the items from cart and close the cart if no items present
 function removeFromCart() {
-	var i = $(this).attr("id").replace("rmv", "");
+	var i = $(this).attr("productId");
 	console.log(i);
 	cart[i] -= 1;
 	count= count-1;
@@ -95,7 +95,7 @@ function closeCart() {
 }
 
 function addinCart(){
-	var i = $(this).attr("id").replace("add", "");
+	var i = $(this).attr("productId");
 	cart[i] += 1;
 	count++;
 	$("#items").text(count);
@@ -104,7 +104,7 @@ function addinCart(){
 }
 
 function deleteItem(){
-	var i = $(this).attr("id").replace("del", "");
+	var i = $(this).attr("productId");
 	count = count - cart[i];
 	$("#items").text(count);
 	cart[i] = 0;
