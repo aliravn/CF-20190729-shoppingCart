@@ -162,24 +162,7 @@ main {
   margin: 0 auto;
   display: flex;
   justify-content: space-between; 
-  flex-wrap: wrap;}
-
-.top_box {
-  width: 30%;
-  margin: 2vw 0;
-}
-
-.new_products {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 2vw;
-}
-
-.new_products > span {
-  margin-left: 2vw; 
-  margin-top: 3vw;
-  font-weight: bold;
+  flex-wrap: wrap;
 }
 
 #header {
@@ -204,6 +187,7 @@ main {
   box-shadow: 1px 1px 5px grey, -1px -1px 5px grey;
   cursor: pointer;
   padding-bottom: 1vw;
+  margin-bottom: 1vw;
 }
 
 .gadgetBox > img, p, div {

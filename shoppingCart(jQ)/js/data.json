@@ -14,4 +14,36 @@ var products = [{
 	"name": "18K White Gold Ring",
 	"image": "img/ring.jpg",
 	"price": 1190,
+},{
+	"name": "18K White Gold Ring",
+	"image": "img/ring.jpg",
+	"price": 1190,
+},{
+	"name": "18K White Gold Ring",
+	"image": "img/ring.jpg",
+	"price": 1190,
+},{
+	"name": "18K White Gold Ring",
+	"image": "img/ring.jpg",
+	"price": 1190,
+},{
+	"name": "18K White Gold Ring",
+	"image": "img/ring.jpg",
+	"price": 1190,
+},{
+	"name": "18K White Gold Ring",
+	"image": "img/ring.jpg",
+	"price": 1190,
+},{
+	"name": "18K White Gold Ring",
+	"image": "img/ring.jpg",
+	"price": 1190,
+},{
+	"name": "18K White Gold Ring",
+	"image": "img/ring.jpg",
+	"price": 1190,
+},{
+	"name": "18K White Gold Ring",
+	"image": "img/ring.jpg",
+	"price": 1190,
 }];

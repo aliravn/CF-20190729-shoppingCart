@@ -74,7 +74,7 @@ function showCart() {
 
 // remove the items from cart and close the cart if no items present
 function removeFromCart() {
-	var i = $(this).attr("id")[3];
+	var i = $(this).attr("id").replace("rmv", "");
 	console.log(i);
 	cart[i] -= 1;
 	count= count-1;
@@ -95,7 +95,7 @@ function closeCart() {
 }
 
 function addinCart(){
-	var i = $(this).attr("id")[3];
+	var i = $(this).attr("id").replace("add", "");
 	cart[i] += 1;
 	count++;
 	$("#items").text(count);
@@ -104,7 +104,7 @@ function addinCart(){
 }
 
 function deleteItem(){
-	var i = $(this).attr("id")[3];
+	var i = $(this).attr("id").replace("del", "");
 	count = count - cart[i];
 	$("#items").text(count);
 	cart[i] = 0;
