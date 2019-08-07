@@ -7,8 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="css/shopstyle.css">
 	<script src="https://kit.fontawesome.com/c2f140ad0b.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="js/jquery.cookie.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
 	<header>
 		<div id="header-top-container">
@@ -17,6 +19,7 @@
 			<span>CREATE ACCOUNT</span>
 		</div>
 	</header>
+
 	<nav>
 		<a href="index.html">HOME</a>
 		<a href="#">EYEWEAR</a>
@@ -26,13 +29,12 @@
 		<button id="cartBtn">VIEW CART(<span id="items">0</span>)</button>
 	</nav>
 
-
-
 	<main>
+<!-- THIS IS THE SHOPPING CART DIV - STATIC CONTENT -->
 		<section id="shoppingCart">
 			<span id="closeButton">&#10006;</span>
 			<div id="cart-content">
-			
+<!-- THIS IS WHERE THE SHOPPING CART CONTENT WILL BE DISPLAYED -->
 			</div>
 			<p><b>*Shipping info:</b> total price > 800 Euros = 6 Euros, otherwise = 9 Euros</p>
 			<div>Total price (netto): <span id="totalPrice"></span> EUR</div>
@@ -44,12 +46,10 @@
 			<button id="checkout">Checkout</button>
 		</section>
 		
-		<div class="new_products">
-			<h1 id="header">FEATURED PRODUCTS</h1>
-		</div>
+		<h1 id="header">FEATURED PRODUCTS</h1>
 		
 		<section id="shop">
-
+<!-- THIS IS WHERE THE PRODUCTS WILL BE DISPLAYED -->
 		</section>
 
 	</main>
@@ -63,13 +63,13 @@
 
 
 <!-- muster of product box for styling purpose
- 			<div class="gadgetBox">
-				<img src="img/img_air.jpeg">
-				<p class="category">"category" from JSON</p>
-				<p class="product">"name" from JSON</p>
-				<p class="price">"price" from JSON</p>
-				<div>&#9825;&#8644;&#128065;</div>
-			</div> -->
+	<div class="gadgetBox">
+		<img src="img/img_air.jpeg">
+		<p class="category">"category" from JSON</p>
+		<p class="product">"name" from JSON</p>
+		<p class="price">"price" from JSON</p>
+		<div>&#9825;&#8644;&#128065;</div>
+	</div> -->
 
 
 <!-- MUSTER of CART BOX FOR STYLING

@@ -1,6 +1,6 @@
 body, html {
   margin: 0; 
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -151,11 +151,6 @@ nav {
   align-self: flex-end;
 }
 /* ---------- MAIN SECTION --------- */
-h1 {
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-}
 
 main {
   width: 90%;
@@ -163,6 +158,12 @@ main {
   display: flex;
   justify-content: space-between; 
   flex-wrap: wrap;
+}
+
+h1 {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
 }
 
 #header {

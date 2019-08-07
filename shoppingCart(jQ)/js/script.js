@@ -34,8 +34,10 @@ function calcTotalPrice() {
 			totalPrice = totalPrice + cart[i] * products[i].price;
 		}	
 	}
+	$.cookie('totalPrice', totalPrice);
 	return totalPrice;
 }
+
 
 // show the cart content and calculates the price
 $("#cartBtn").click(showCart);
